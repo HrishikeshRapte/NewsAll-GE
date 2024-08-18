@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GL NewsAll</title>
+    <link rel="stylesheet" href="news.css">
+    <link rel="icon" type="image/png=" sizes="70x70" href="GL news Logo.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body id="Top">
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo"><img src="GL news Logo.png" alt=""></a>
+            <div class="nav-links">
+                <marquee behavior="" direction="" onmouseover="this.stop();" onmouseout="this.start()">
+                    <ul class="flex">
+                        <li class="hover-link nav-item" id="sports" onclick="onNavItemClick('sports')">Sports</li>
+                        <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                        <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                        <li class="hover-link nav-item" id="international" onclick="onNavItemClick('international')">
+                            International</li>
+                        <li class="hover-link nav-item" id="education" onclick="onNavItemClick('education')">Education
+                        </li>
+                        <li class="hover-link nav-item" id="health" onclick="onNavItemClick('health')">Health</li>
+                        <li class="hover-link nav-item" id="weather" onclick="onNavItemClick('weather')">Weather</li>
+                        <li class="hover-link nav-item" id="business" onclick="onNavItemClick('business')">Business</li>
+                        <li class="hover-link nav-item" id="trade" onclick="onNavItemClick('trade')">Trade Market</li>
+                    </ul>
+                </marquee>
+            </div>
+            <div class="search-bar flex">
+                <input class="news-input" id="search-text" placeholder="eg. Technology" type="text">
+                <button class="search-button" id="search-button">Go</button>
+            </div>
+        </div>
+    </nav>
+    <!-- slider for pc -->
+    <div id="frame">
+        <input type="radio" name="frame" id="frame1" checked />
+        <input type="radio" name="frame" id="frame2" />
+        <input type="radio" name="frame" id="frame3" />
+        <input type="radio" name="frame" id="frame4" />
+        <div id="slides">
+            <div id="overflow">
+                <div class="inner">
+                    <div class="frame frame_1">
+                        <div class="frame-content">
+                            <video loop muted controls>
+                                <source src="news1(R).mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="frame frame_2">
+                        <div class="frame-content">
+                            <video loop muted controls>
+                                <source src="news2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="frame frame_3">
+                        <video loop muted controls>
+                            <source src="news1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="controls">
+            <label for="frame1"></label>
+            <label for="frame2"></label>
+            <label for="frame3"></label>
+        </div>
+        <div id="bullets">
+            <label for="frame1"></label>
+            <label for="frame2"></label>
+            <label for="frame3"></label>
+        </div>
+    </div>
+
+    <!-- slider for mobile -->
+    <div class="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+
+        <div class="slides">
+            <div class="slide" id="s1">
+                <img src="mob1.jpg" height="300px" alt="Slide 1">
+            </div>
+            <div class="slide" id="s2">
+                <img src="mob2.jpg" height="300px" alt="Slide 2">
+            </div>
+            <div class="slide" id="s3">
+                <img src="https://www.aljazeera.com/wp-content/uploads/2024/04/AP24091470607899-1712201915.jpg?resize=770%2C513&quality=80"
+                    height="300px" width="100%" alt="Slide 3">
+            </div>
+        </div>
+
+        <div class="controls">
+            <label for="slide1" class="control-button"></label>
+            <label for="slide2" class="control-button"></label>
+            <label for="slide3" class="control-button"></label>
+        </div>
+    </div>
+
+    <div>
+        <a href="#footer-main" id="arrow"><i class="ri-arrow-down-line"></i></a>
+    </div>
+    <main>
+        <!-- <h3>Get all the Latest News just at one Place</h3> -->
+        <div class="cards-container container flex" id="cards-container">
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-img" id="news-img">
+            </div>
+
+            <div class="card-content">
+                <h3 id="news-title">This is Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
+                    doloribus obcaecati sed aliquam ratione illo hic consequatur. Consectetur, tempora exercitationem!
+                </p>
+            </div>
+        </div>
+    </template>
+    <div>
+        
+    </div>
+    <footer id="footer-main">
+        <div class="c">© Copyright 2024: GL News</div>
+        <div class="social flex">
+            <h3><i>Get Access to our Daily Newsletters</i></h3>
+            <input class="social-input" id="social input" placeholder="enter your email" type="text">
+            <button class="social-button" id="social-button">Go</button>
+        </div>
+        <div class="footer">
+            <img src="GL news Logo.png" alt="">
+            <ul>
+                <li>Contact us</li>
+                <li>Join us</li>
+                <li>Careers</li>
+                <li>About us</li>
+                <li>Support</li>
+                <li>Daily updates</li>
+            </ul>
+
+            <ul>
+                <li>Media Handlers</li>
+                <li>Corporate Business</li>
+                <li>Blogs</li>
+                <li>Others</li>
+                <li>Team Login</li>
+                <li>Project Dept</li>
+            </ul>
+
+            <ul>
+                <li>Addresss</li>
+                <li>Headquater Locations</li>
+                <li>Campuses</li>
+                <li>Employee Query</li>
+                <li>Feedback</li>
+                <div class="gotop"><li><a href="#top">Go on Top</a></li></div>
+                <!-- <li>Daily updates</li>
+                <li>Collaborations</li> -->
+            </ul>
+        </div>
+        <div class="myself">
+            <h3>(+91)9130927731 ~ Hrishikesh Rapte</h3>
+        </div>
+    </footer>
+    <script src="news.js"></script>    
+</body>
+</html>
